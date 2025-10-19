@@ -4,7 +4,8 @@ import React, { createContext, useContext, useEffect, useState, ReactNode } from
 import { io, Socket } from 'socket.io-client';
 import { ArbitrageOpportunity } from '@/types';
 
-const WS_URL = process.env.NEXT_PUBLIC_WS_URL || 'http://localhost:5000';
+// Use the actual backend server URL for WebSocket
+const WS_URL = 'http://127.0.0.1:5000';
 
 interface SocketContextType {
   socket: Socket | null;
