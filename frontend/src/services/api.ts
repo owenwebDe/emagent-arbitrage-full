@@ -1,6 +1,7 @@
 import axios, { AxiosInstance, AxiosError } from 'axios';
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000';
+// Use relative URL for API calls - will be proxied by Next.js
+const BACKEND_URL = '';
 
 class ApiService {
   private api: AxiosInstance;
@@ -11,7 +12,7 @@ class ApiService {
       headers: {
         'Content-Type': 'application/json',
       },
-      withCredentials: true,
+      withCredentials: false,
     });
 
     // Request interceptor
